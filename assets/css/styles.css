@@ -1,0 +1,45 @@
+/* Custom CSS */
+
+button:focus {
+    outline: none;
+}
+
+.glow-link:hover{
+    background: linear-gradient(to top, rgba(97, 97, 97, 0.1) 0%, rgba(52, 58, 64, 0) 15%);
+}
+
+.index-chapter {
+    list-style-type: disc;
+    padding: 0;
+    margin-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.chapter-title {
+    font-weight: bolder;
+    font-size: 2rem;
+    clear: both;
+    padding-top: 1rem;
+}
+a.chapter-heading {
+    text-decoration: none;
+    color: rgb(211, 120, 0);
+    font-size: 1.1rem;
+}
+a.chapter-heading:hover {
+    text-decoration: underline;
+}
+a.chapter-heading:active {
+    color: royalblue;
+}
+
+footer {
+    position: relative;
+    top: calc(50vh - 80px);
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+}
+/* CSS for code decoration */
+

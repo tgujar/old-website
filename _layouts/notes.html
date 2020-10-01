@@ -1,0 +1,19 @@
+---
+layout: base
+---
+{% assign next = site.notes | where: "book", page.book | where_exp:"item", "item.section > page.section" | sort | first %}
+{% assign prev = site.notes | where: "book", page.book | where_exp:"item", "page.section > item.section " | sort | last %}
+<div class="container">
+    <div class="row mt-4 justify-content-center">
+        <div class="col-lg-9">
+            <h1 class="display-3 text-center">{{ page.title }}</h1>
+            {{ content }}
+            {% if next %}
+            <a class="d-block float-right lead" href="{{next.url}}">next <i class="fas fa-chevron-right"></i></a>
+            {% endif %}
+            {% if prev%}
+            <a class="d-block float-left lead" href="{{ prev.url }}"><i class="fas fa-chevron-left"></i> prev</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

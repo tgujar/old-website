@@ -1,0 +1,33 @@
+---
+layout: base
+---
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-2">My Notes <i class="fa fa-book"></i></h1>
+        <h2>
+            My notes on books I've read or am reading.
+        </h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {% for book in site.data.books %}
+        <div class="col-lg-4">
+            <div class="card text-white {% if book.status == "green" %}
+            bg-success
+          {% elsif book.status == "yellow" %}
+            bg-warning
+          {% else %}
+            bg-secondary
+          {% endif %} mb-3">
+                <h2 class="card-header">{{ book.name }}</h2>
+                <div class="card-body bg-dark">
+                    <p class="card-text">{{ book.description }}</p>
+                    <a href="/index/{{book.nickname}}.html" class="btn btn-primary">Read <i class="fas fa-book-open"></i></a>
+                </div>
+            </div>
+        </div> 
+        {% endfor %}
+    </div>
+</div>

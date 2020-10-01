@@ -1,0 +1,39 @@
+---
+layout: base
+title: Tanmay's Space
+---
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-2">Welcome to my blog!</h1>
+    <h2>
+      I post about topics in <strong>Computer Science</strong> and <strong>Math</strong> that I found interesting.
+    </h2>
+    <p class="text-muted font-italic">*It may occasionally contain rants.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-3">
+      <div class="border border-dark bg-dark rounded text-light">
+        <h2 class="display-4 text-center font-weight-bold">Posts</h2>
+      </div>
+    </div>
+    <div class="col-lg-8 mt-2">
+      {% for post in site.posts %}
+      <article class="glow-link">
+        <a href="{{ post.url }}" class="block text-decoration-none text-reset">
+          <h2 class="display-4">
+            {{ post.title }}
+          </h2>
+          <p class="text-muted">{{ post.date | date_to_long_string: "ordinal", "US" }}</p>
+          <p class="lead">
+            {{ post.excerpt }}
+          </p>
+          <hr>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>

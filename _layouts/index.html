@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+{% assign book = site.data.books | where: "nickname", page.book | first %}
+{% assign notes = site.notes | where: "book", page.book %}
+{% assign chapters = notes | map: "chapter-num" | uniq | sort %}
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4"><i class="fa fa-book"></i> {{book.name}}</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="index">
+                {% for chapter in chapters %}
+                <h3 class="chapter-title">Chapter {{ chapter }}: {{ notes | where: "chapter-num", chapter | map: "chapter" | first}}</h3>
+                <ul class="index-chapter">
+                {% assign sections = notes | where: "chapter-num", chapter | sort: "section" %}
+                {% for section in sections %}
+                    <li><a href="{{section.url}}" class="chapter-heading">{{ section.title }}</a></li>
+                {% endfor %}
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
