@@ -1,6 +1,6 @@
 ---
 book: sicp
-title: special forms
+title: Special Forms
 chapter: Lorem ipsum
 chapter-num: 1
 section: 1.3.4

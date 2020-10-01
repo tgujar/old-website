@@ -1,6 +1,6 @@
 ---
 book: sicp
-title: exercises
+title: Exercises
 chapter: Lorem ipsum
 chapter-num: 1
 section: 1.3.5
