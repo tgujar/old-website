@@ -32,7 +32,7 @@ It will lead to infinte loop. **sqrt-iter** gets evaluated each time because it 
 
 ### Exercise 1.7
 
-With the precision set to $10^-3$, i.e the difference between the square of the guessed value and square of the actual root is allowed to differ at most by $10^-3$, we find that the difference between the guessed root and the actual root is large. This is because, for small values << 1, if we look at the graph of $x^2$, we find that the for small change in y, the corresponding change in x is larger.
+With the precision set to $$ 10^{-3} $$ , i.e the difference between the square of the guessed value and square of the actual root is allowed to differ at most by $$ 10^{-3} $$ , we find that the difference between the guessed root and the actual root is large. This is because, for small values << 1, if we look at the graph of $$ x^2 $$, we find that the for small change in y, the corresponding change in x is larger.
 
 <iframe src="https://www.desmos.com/calculator/inne2rv7qf?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 
