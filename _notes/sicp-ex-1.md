@@ -10,7 +10,7 @@ section: 1.1.1
 <iframe height="400px" width="100%" src="https://repl.it/@TanmayGujar/SICP-EX-13?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ### Exercise 1.4
-If b is greater then 0, then return (a + b), otherwise, return (a - b).
+If b is greater than 0, then return (a + b), otherwise, return (a - b).
 
 ### Exercise 1.5
 The program will crash in case of applicative order evaluation.
