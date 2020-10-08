@@ -11,12 +11,13 @@ It states the following:
 > - If $$N$$ denotes the number of variations of sign in the formula for $$f(-x)$$, then the number of negative real zeroes is one of the numbers $$\{N, N-2, N-4, ...\}$$
 
 ## Proof
-
+<p>
 $$
 Let,
 f(x) = b_nx^n + b_{n-1}x^{n-1} + b_{n-2}x^{n-2} + ... + b_1x + b_0 \\
 h(x) = f(x)/b_n = x^n + a_nx^{n-1} + a_{n-1}x^{n-2} + ... + a_1x + a_0
 $$
+</p>
 
 We note that $$h(x)$$ has the same roots as $$f(x)$$, and has the same sign pattern changes. Thus, for further statements we can use $$h(x)$$ instead.
 
@@ -43,7 +44,7 @@ This is be proved using the following line of thought
 2. Complex roots, in case of a polynomial with real coefficients, always occur in conjugate pairs. i.e $$(a+bi)$$ and $$(a-bi)$$.
 
 3. The quadratic equation obtained from multiplying complex conjugates always has a constant term which is grater than 0.
-
+    <p>
     $$
     \begin{align*}
     &(x-a-bi)(x-a+bi)\\
@@ -52,11 +53,12 @@ This is be proved using the following line of thought
     &=x^2 - 2ax + a^2 + b^2
     \end{align*}
     $$
-
+    </p>
     Since $$a^2 + b^2$$ cannot be negative, we conclude that the costant is always positive.
 
 4. $$a_0$$ in $$h(x)$$ is the product of negation of all the positive and negative roots and the constant terms in quadratic eqautions obtained by breaking $$f(x)$$ into its factors.<br>
     For example:<br>
+    <p>
     $$
     \begin{align*}
     &f(x) = (x+c_1)(x-c_2)(x^2-2ax+a^2+b^2) \\
@@ -64,6 +66,7 @@ This is be proved using the following line of thought
     &a_0 = (c1)(-c_2)(a^2+b^2)
     \end{align*}
     $$
+    </p>
 
 5. We can see that $$a_0 < 0$$ only when there are an odd number of positive roots.
     Negative and complex roots cannot change the sign of $$a_0$$ because negative roots are of the form $$(x+c)$$ in the factorization, and the constant term due to complex roots is positive as seen in **3**.
@@ -76,7 +79,7 @@ $$V[f(x)(x-n)] > V[f(x)]$$
 Let's suppose that the variation in sign changes for $$h(x)$$ is as follows: $$++--+-+$$. For $$(x-n)$$ its $$+-$$
 
 Multiplying, we have
-
+<p>
 $$
 \begin{align*}
 ++--+-+& \\
@@ -88,7 +91,7 @@ $$
 +\#-\#+-+-&
 \end{align*}
 $$
-
+</p>
 The $$#$$ could end up positive or negative depending on the absolute value of the coefficients.
 
 Notice however, that the $$#$$ symbol only appears before and after a transition in sign in $$h(x)$$. Therefore, they must always appear between two opposing signs. Also, the original number of sign changes is preserved, and the unknown $$#$$ signs may only increase the number of sign variations.
@@ -103,9 +106,11 @@ $$\therefore$$ multiplying a polynomial with a **positive factor**$$(x-n)$$ incr
 
 ### IV.
 Let a function $$f(x)$$ be denoted by
+<p>
 $$
 f(x) = N(x)(x-p_1)(x-p_2)(x-p_3)
 $$
+</p>
 Where $$N(x)$$ is only composed of negative and complex roots.
 
 From $$II.$$ we note that the number of sign changes in $$N(x)$$ has to be even.

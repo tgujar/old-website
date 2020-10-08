@@ -8,6 +8,10 @@ button:focus {
     background: linear-gradient(to top, rgba(97, 97, 97, 0.1) 0%, rgba(52, 58, 64, 0) 15%);
 }
 
+p {
+  overflow: auto;
+}
+
 .index-chapter {
     list-style-type: disc;
     padding: 0;
