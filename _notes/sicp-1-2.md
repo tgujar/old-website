@@ -114,6 +114,9 @@ Coeff of fib(1) is fib(n), and that of fib(0) is fib(n-1)
 ~~~
 This value is important as fib(0) and fib(1) are termination cases, therefore the number of procedure calls is much more than this number. The fibonacci number can also be described as the closest interger to $$\phi^n$$.
 Where,
-$$\phi = \frac{1 + \sqrt{5}}{2}
+<p>
 $$
+\phi = \frac{1 + \sqrt{5}}{2}
+$$
+</p>
 Thus, the number of steps grows exponentially with the input.
