@@ -52,6 +52,19 @@ footer {
     width: auto;
     margin: 1rem;
 }
+div.highlight {
+  margin-left: 0;
+  margin-right: 0;
+}
+.repl {
+  text-align: right;
+  margin: 0;
+  font-weight: bold;
+}
+.repl::after {
+  content: " \f35d";
+  font-family: "Font Awesome 5 Free";
+}
 
 /* CSS for code decoration */
 

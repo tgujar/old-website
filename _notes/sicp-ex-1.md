@@ -7,7 +7,19 @@ section: 1.1.1
 ---
 
 ### Exercise 1.3
-<iframe height="400px" width="100%" src="https://repl.it/@TanmayGujar/SICP-EX-13?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+~~~scheme
+(define (square x) (* x x))
+(define (sumOfSquares x y) (+ (square x) (square y)))
+(define (>= x y) (not (< x y)))
+(define (f x y z)
+  (cond ((and (>= x y) (>= y z)) (sumOfSquares x y))
+        ((and (>= x y) (>= z y)) (sumOfSquares z x))
+        (else (sumOfSquares z y))
+  )
+)
+~~~
+[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-13){: target="_blank"}
+{: .repl}
 
 ### Exercise 1.4
 If b is greater than 0, then return (a + b), otherwise, return (a - b).
@@ -34,12 +46,52 @@ It will lead to infinte loop. **sqrt-iter** gets evaluated each time because it 
 
 With the precision set to $$ 10^{-3} $$ , i.e the difference between the square of the guessed value and square of the actual root is allowed to differ at most by $$ 10^{-3} $$ , we find that the difference between the guessed root and the actual root is large. This is because, for small values << 1, if we look at the graph of $$ x^2 $$, we find that the for small change in y, the corresponding change in x is larger.
 
-<iframe src="https://www.desmos.com/calculator/inne2rv7qf?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+<iframe src="https://www.desmos.com/calculator/goqcwtfbjs?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 For larger numbers, the interpreter drops the numbers with lower base which causes erronous subtraction and results in a wrong root.
+~~~scheme
+(define (sqrt-iter guess x)
+  (if (good-enough? (improve guess x) guess)
+      guess
+      (sqrt-iter (improve guess x) x)))
 
-<iframe height="400px" width="100%" src="https://repl.it/@TanmayGujar/SICP-EX-17?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+(define (improve guess x)
+  (average guess (/ x guess)))
+
+(define (average x y)
+  (/ (+ x y) 2))
+
+(define (square x) (* x x))
+
+(define (good-enough? guess last-guess)
+  (< (abs (- guess last-guess)) 0.001))
+
+(define (sqrt x)
+  (sqrt-iter 1.0 x))
+~~~
+[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-17){: target="_blank"}
+{: .repl}
 
 ### Exercise 1.8
 
-<iframe height="400px" width="100%" src="https://repl.it/@TanmayGujar/SICP-EX-18?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+~~~scheme
+(define (cube-iter guess x)
+  (if (good-enough? (improve guess x) guess)
+      guess
+      (cube-iter (improve guess x) x)))
+
+(define (improve guess x)
+  (/ (+ (/ x (square guess)) (* 2 guess)) 3))
+
+
+(define (square x) (* x x))
+
+(define (good-enough? guess last-guess)
+  (< (abs (- guess last-guess)) 0.001))
+
+(define (cubert x)
+  (cube-iter 1.0 x))
+~~~
+[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-18){: target="_blank"}
+{: .repl}
