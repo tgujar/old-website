@@ -120,3 +120,14 @@ $$
 $$
 </p>
 Thus, the number of steps grows exponentially with the input.
+
+## Orders of Growth
+
+Order of growth of a process is used to obtain a gross measure of the resources required by the process as the inputs become larger.
+
+If $$n$$ is the parameter that measures the size of the problem, and $$R(n)$$ describes the amount of resources required by the process, then $$\THETA(f(n))$$ describes the order of growth. Here, $$f(n)$$ is such that $$k_1f(n) < R(n) < k_2f(n)$$ for any sufficiently large value of $$n$$.
+
+The amount of resources can be measured as the number of steps in the process, or the amount of memory consumed etc.
+For e.g if in computing the fibonacci series using an iterative process, we choose $$R(n)$$ as the number of steps required by the process, then the order of growth is $$\THETA(\phi^n)$$.
+
+The order of growth only provides a crude measure of the behaviour of the process. For e.g a process requiring $$n^2$$, and one requiring $$100n^2$$ have the same order of growth. But, it does provide a useful indication of how the behaviour of the process changes as we increase the size of the problem. e.g in case of a linear process the amount of resources required increases by the same amount as the increase in the input, whereas in case of an exponential process, each increment will multiply the resources required by a constant factor.
