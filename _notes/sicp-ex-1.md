@@ -1,5 +1,5 @@
 ---
-title: Exercises 1.3-1.7
+title: Exercises 1.3-1.8
 book: sicp
 chapter: Building Abstractions with Procedures 
 chapter-num: 1
@@ -18,8 +18,7 @@ section: 1.1.1
   )
 )
 ~~~
-[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-13){: target="_blank"}
-{: .repl}
+[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-13){: .external target="_blank"}
 
 ### Exercise 1.4
 If b is greater than 0, then return (a + b), otherwise, return (a - b).
@@ -70,8 +69,7 @@ For larger numbers, the interpreter drops the numbers with lower base which caus
 (define (sqrt x)
   (sqrt-iter 1.0 x))
 ~~~
-[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-17){: target="_blank"}
-{: .repl}
+[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-17){: .external target="_blank"}
 
 ### Exercise 1.8
 
@@ -93,5 +91,4 @@ For larger numbers, the interpreter drops the numbers with lower base which caus
 (define (cubert x)
   (cube-iter 1.0 x))
 ~~~
-[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-18){: target="_blank"}
-{: .repl}
+[Try in Repl.it](https://repl.it/@TanmayGujar/SICP-EX-18){: .external target="_blank"}
