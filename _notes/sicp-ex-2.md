@@ -241,7 +241,7 @@ amount: list0[1] = 50
 list1_b: (50, 25, 0)
 
 amount: list0[2] = 0
-list_c: (0)
+list_c: ()
 
 list1:  list1_a + list1_b + list1_c
 ~~~
@@ -249,7 +249,7 @@ i.e the total number of recursive calls are given by:
 <p>
 $$
 \begin{align*}
-R(n) &= 2((2*n_0 + 1) + (2*n_1 + 1) + (2*n_2 + 1)) + 1 \\
+R(n) &= (2*n_0 + 1) + (2*n_1 + 1) + (2*n_2 + 1) \\
 where,n_i &= \left\lfloor \frac{a - id_1}{d_2} \right \rfloor \\
 d1 &= 50 \\
 d2 &= 25 \\
@@ -262,7 +262,7 @@ From the above treatment, we can say that if there are only two denominations $$
 <p>
 $$
 \begin{align*}
-R(n) &= 2(\sum_{i=0}^{\left\lfloor \frac{a}{d_1} \right \rfloor}(2*\left\lfloor \frac{a - id_1}{d_2} \right \rfloor + 1)) + 1 \\
+R(n) &= \sum_{i=0}^{\left\lfloor \frac{a}{d_1} \right \rfloor}(2*\left\lfloor \frac{a - id_1}{d_2} \right \rfloor + 1) \\
 Order\;of\;growth\; &= \Theta(a^2) \\
 \end{align*}
 $$
