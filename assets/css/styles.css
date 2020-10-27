@@ -56,14 +56,23 @@ div.highlight {
   margin-left: 0;
   margin-right: 0;
 }
-.repl {
-  text-align: right;
+a.external {
+  float: right;
   margin: 0;
   font-weight: bold;
 }
-.repl::after {
+a.external::after {
   content: " \f35d";
   font-family: "Font Awesome 5 Free";
+}
+img {
+  display: block;
+}
+.img-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* CSS for code decoration */
