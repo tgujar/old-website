@@ -275,7 +275,7 @@ If we take the remainder before applying the square, and take the reminder again
 
 The number of steps grow as $$O(logn)$$, since the exponentiation procedure grows as $$O(logn)$$.
 
-### Probabilistic methods
+#### Probabilistic methods
 
 When a number passes the Fermat's test, it is a strong indication that the number is prime. However, it is not certain that that it is indeed a prime. If the test passes for more cases then we simply improve the probability that the number is prime. Algorithms where the error probability can be made arbitrarily small are called a probablilistic algorithms.
 
