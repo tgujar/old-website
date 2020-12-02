@@ -169,7 +169,9 @@ One way to find GCD of two numbers would be to factor the two numbers and then f
 
 Euclid's algorithm is based on the fact that $$ GCD(a, b) = GCD (b, r) $$, where $$r$$ is the remainder of $$a / b$$. We can see this fact easily
 <p>
+$$
 a = q*b + r; where\;q\;is\;the\;quotient
+$$
 </p>
 The largest factor of $$a$$ and $$b$$,is also a factor of $$r$$. Since $$r$$ is the largest factor of itself, and any factor of both $$b$$ and $$r$$ is also a factor of $$a$$, finding the GCD of $$b$$ and $$r$$ should give us the correct result.
 
@@ -233,7 +235,7 @@ The simplest solution to test a numbers primality would be to check all the numb
 
 Here, two numbers are said to be *congruent modulo n* if they both have the same remainder when divided by *n*. In simple terms, the statements says that, if we divide $$a^n$$ by $$n$$, then the result will be $$a$$, if $$n$$ is prime.
 
-If n is not prime then, for most numbers, $$a<\n$$, the above relation will not apply. i.e if we select $$k$$ numbers less than n, and check if the above relation applies, then if the relation doesn't apply to any one of them, the number is not prime, else it's prime.
+If n is not prime then, for most numbers, $$a<n$$, the above relation will not apply. i.e if we select $$k$$ numbers less than n, and check if the above relation applies, then if the relation doesn't apply to any one of them, the number is not prime, else it's prime.
 
 This test can be implemented as follows:
 
@@ -261,7 +263,7 @@ This test can be implemented as follows:
 ~~~
 In the above code, repeated application of *remainder* does not alter the final result since squaring doesn't affect remainders.
 E.g
-Let $a$, be the value at any given step in the recursion, n be the divisor, q and r are quotient and remainder in the division
+Let $$a$$, be the value at any given step in the recursion, n be the divisor, q and r are quotient and remainder in the division
 <p>
 $$
 \begin{align*}
