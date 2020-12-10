@@ -74,6 +74,10 @@ img {
   justify-content: center;
   align-items: flex-start;
 }
+.heading-follow {
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
 
 /* CSS for code decoration */
 
