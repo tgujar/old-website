@@ -268,8 +268,8 @@ Let $$a$$, be the value at any given step in the recursion, n be the divisor, q 
 $$
 \begin{align*}
 a = qn + r \\
-(remainder\;a^2\;n) &= (remainder\;q^2n^2 + r^2 + 2qnr\;n) \\
-&= (remainder\;r^2\;n)
+(remainder\;\;a^2\;\;n) &= (remainder\;\;q^2n^2 + r^2 + 2qnr\;\;n) \\
+&= (remainder\;\;r^2\;\;n)
 \end{align*}
 $$
 </p> 
